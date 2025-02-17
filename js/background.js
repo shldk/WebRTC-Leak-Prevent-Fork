@@ -42,15 +42,3 @@ chrome.storage.local.get(null, function(items){
     }
   }
 });
-
-/* Open options page on install. */
-chrome.runtime.onInstalled.addListener(function(details){
-  if(details.reason == "install"){
-    chrome.runtime.openOptionsPage();
-  }
-});
-
-/* Open options page on toolbar icon click. */
-chrome.browserAction.onClicked.addListener(function(){
-  chrome.runtime.openOptionsPage();
-});
